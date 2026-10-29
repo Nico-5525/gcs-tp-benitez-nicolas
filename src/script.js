@@ -14,11 +14,8 @@ const ETIQUETAS_ESTADO = {
 // No usan el DOM ni localStorage, por eso se pueden probar con Node.js.
 // ---------------------------------------------------------------
 
-// En v1.0 solo comprobamos que el teléfono no esté vacío.
-// La validación de que contenga exclusivamente números
-// se incorporará en la versión v1.1.
 function validarTelefono(tel) {
-    return String(tel).trim().length > 0;
+    return /^[0-9]+$/.test(tel);
 }
 
 function estadoDe(cliente) {

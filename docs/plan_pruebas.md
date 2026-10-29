@@ -82,23 +82,6 @@ Comprueba: lista completa sin filtros; filtrado por activo; filtrado por inactiv
 - Cuenta el total y la cantidad de clientes por estado.
 - Devuelve todos los contadores en cero para una lista vacía.
 
-## 6. Corrección prevista para el Issue #101
 
-La versión inicial acepta `ABC123`, lo que representa el defecto a corregir. Durante la parte correspondiente del práctico, se actualizará la función y también la prueba que actualmente espera `true` para ese valor.
-
-Después del cambio, los resultados previstos para la validación son:
-
-| Entrada | Resultado esperado en la versión corregida |
-|---|---|
-| `2801234567` | `true` |
-| `123456` | `true` |
-| `ABC123` | `false` |
-| `280ABC4567` | `false` |
-| `""` | `false` |
-| `"   "` | `false` |
-| `123 456` | `false` |
-| `123-456` | `false` |
-
-El defecto es parte del ejercicio de control de cambios.
 
 
