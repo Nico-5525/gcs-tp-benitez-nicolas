@@ -50,12 +50,9 @@ Esta línea base representa el estado inicial del proyecto antes de implementar 
 
 ## 5. Historial de versiones
 
-| Versión | Estado | Descripción | Referencia |
-|---|---|---|---|
-| v1.0 | Línea base registrada | Versión inicial del gestor de clientes. | Commit inicial y tag `v1.0` |
-| v1.1 | En preparación | Incorporación de la validación del teléfono y actualización de pruebas y documentación. | Ticket #101 |
-
-La versión v1.1 permanecerá en preparación hasta que la corrección se integre en `main` y se publique la etiqueta y Release correspondientes.
+Versión	Fecha	   Ticket	Descripción	            Responsable 	
+v1.0	Línea base	-	     Versión inicial	     Alumno	        
+v1.1	29/10/2026	#101	Validación de teléfono	Alumno
 
 ## 6. Trazabilidad y control de cambios
 
