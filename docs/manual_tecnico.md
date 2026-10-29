@@ -31,7 +31,7 @@ Contiene funciones reutilizables y la lógica de la interfaz. Las funciones pura
 
 | Función | Responsabilidad actual |
 |---|---|
-| `validarTelefono(tel)` | En v1.0 devuelve `true` si el valor convertido a texto no está vacío después de quitar espacios exteriores. No comprueba que sean solo dígitos. |
+| `validarTelefono(tel)` | En v1.1 la función recibe el teléfono como argumento y devuelve un valor booleano: true si cumple la regla de solo digítos y false si no la cumple. |
 | `estadoDe(cliente)` | Devuelve `activo`, `prospecto` o `inactivo` si el estado es válido; si falta o no es reconocido, devuelve `prospecto`. |
 | `normalizar(texto)` | Convierte el texto a minúsculas, elimina tildes y devuelve texto vacío para valores nulos o indefinidos. |
 | `filtrarClientes(lista, texto, estado)` | Filtra por estado y busca coincidencias en nombre, apellido, empresa, correo y teléfono. La búsqueda normaliza mayúsculas y tildes. |
@@ -68,7 +68,21 @@ Cada cliente se representa como un objeto JavaScript. Sus atributos actuales son
 
 Los registros se serializan como JSON bajo la clave `gestorClientes` de `localStorage`. `estadoDe()` permite interpretar registros antiguos que no tengan un estado válido como prospectos.
 
+## Explicación de la expresión regular
+Función validarTelefono(tel)
 
+La expresión regular utilizada es:
+
+/^[0-9]+$/
+
+Sus componentes son:
+/.../: delimitan la expresión regular en JavaScript.
+^: indica el comienzo de la cadena.
+[0-9]: acepta un dígito entre 0 y 9.
++: exige al menos un dígito.
+$: indica el final de la cadena.
+
+El método .test(tel) comprueba si el valor recibido coincide con el patrón completo.
 
 
 

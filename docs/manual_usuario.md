@@ -55,3 +55,11 @@ La aplicación utiliza `localStorage` del navegador. Los registros permanecen al
 - Confirmar cuidadosamente las eliminaciones.
 - Evitar cargar información personal real en un entorno de práctica.
 - No borrar los datos del sitio si se desea conservar los registros guardados.
+
+## Validación del teléfono - Cambio incorporado en la versión 1.1
+
+A partir de la versión 1.1, el sistema valida el formato del teléfono antes de guardar los datos.
+El campo debe contener únicamente dígitos del 0 al 9. No se permiten letras, espacios, guiones ni otros caracteres.
+La versión 1.1 incorpora la validación del formato telefónico como respuesta al defecto documentado en el ticket #101.
+
+ 
