@@ -8,14 +8,21 @@ const {
     contarPorEstado
 } = require("../src/script.js");
 
-test("v1.0: acepta un teléfono no vacío", function () {
+
+test("v1.1: acepta un teléfono compuesto por dígitos", function () {
     assert.equal(validarTelefono("2801234567"), true);
 });
 
-test("v1.0: actualmente acepta letras en el teléfono", function () {
-    // Este comportamiento representa el defecto del ticket #101.
-    assert.equal(validarTelefono("ABC123"), true);
+test("v1.1: rechaza letras en el teléfono", function () {
+    assert.equal(validarTelefono("ABC123"), false);
 });
+
+
+test("v1.1: rechaza guiones y espacios en el teléfono", function () {
+    assert.equal(validarTelefono("280-123-4567"), false);
+    assert.equal(validarTelefono("280 123 4567"), false);
+});
+
 
 // ---------------------------------------------------------------
 // Pruebas adicionales
