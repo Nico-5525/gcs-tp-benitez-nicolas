@@ -1,0 +1,343 @@
+:root {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #243047;
+    background: #f3f6fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.contenedor {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+.encabezado {
+    padding: 42px 0;
+    color: white;
+    background: linear-gradient(120deg, #183153, #2864a5);
+}
+
+.encabezado h1 {
+    margin: 8px 0;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.encabezado p {
+    margin-bottom: 0;
+    color: #e1eafa;
+}
+
+.encabezado .subtitulo {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+main.contenedor {
+    padding-top: 28px;
+    padding-bottom: 40px;
+}
+
+.panel {
+    margin-bottom: 24px;
+    padding: 26px;
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(28, 48, 78, 0.05);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 21px;
+}
+
+.descripcion {
+    margin-top: 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #9dc4ff;
+    border-color: #2864a5;
+}
+
+.campo small {
+    color: #718096;
+    font-size: 12px;
+}
+
+.acciones-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #2864a5;
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4d82;
+}
+
+button:focus-visible {
+    outline: 3px solid #9dc4ff;
+    outline-offset: 2px;
+}
+
+.boton-secundario {
+    background: #e8edf5;
+    color: #243047;
+}
+
+.boton-secundario:hover {
+    background: #d8e1ee;
+}
+
+.oculto {
+    display: none;
+}
+
+.encabezado-tabla {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.contador {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #e8f1ff;
+    color: #245a9b;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e6ebf2;
+    font-size: 14px;
+}
+
+th {
+    color: #64748b;
+    background: #f8fafc;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.boton-editar,
+.boton-eliminar {
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+.boton-editar {
+    background: #e8f1ff;
+    color: #245a9b;
+}
+
+.boton-editar:hover {
+    background: #d6e6ff;
+}
+
+.boton-eliminar {
+    background: #feecec;
+    color: #a52828;
+}
+
+.boton-eliminar:hover {
+    background: #fbdada;
+}
+
+.mensaje-vacio {
+    padding: 22px 0;
+    color: #718096;
+    text-align: center;
+}
+
+.mensaje {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.mensaje:empty {
+    display: none;
+}
+
+footer {
+    padding: 20px;
+    color: #718096;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* --- Estilos nuevos agregados --- */
+.campo-ancho {
+    grid-column: 1 / -1;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+/* Tarjetas de resumen */
+.resumen {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tarjeta-resumen {
+    padding: 18px;
+    background: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(28, 48, 78, 0.05);
+}
+
+.tarjeta-resumen strong {
+    display: block;
+    font-size: 28px;
+    color: #183153;
+}
+
+.tarjeta-resumen span {
+    color: #718096;
+    font-size: 13px;
+}
+
+/* Buscador y filtro */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.filtros input {
+    flex: 1 1 260px;
+}
+
+.filtros input,
+.filtros select {
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+}
+
+/* Insignias de estado */
+.insignia {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.insignia-activo {
+    background: #e6f6ec;
+    color: #1e7a45;
+}
+
+.insignia-prospecto {
+    background: #fff3e0;
+    color: #a85d00;
+}
+
+.insignia-inactivo {
+    background: #eceff3;
+    color: #5b6676;
+}
+
+.celda-notas {
+    max-width: 220px;
+    color: #718096;
+    word-break: break-word;
+}
+
+/* --- Adaptación a celular --- */
+@media (max-width: 650px) {
+    .campos {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .encabezado-tabla {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .resumen {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

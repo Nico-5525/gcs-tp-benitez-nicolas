@@ -1,0 +1,16 @@
+# Dependencias de Node.js (si se incorporan en el futuro)
+node_modules/
+
+# Archivos de registro
+*.log
+npm-debug.log*
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Archivos temporales y copias de respaldo del editor
+*.tmp
+*.bak
+*~
